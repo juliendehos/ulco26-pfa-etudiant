@@ -1,0 +1,23 @@
+cabal-version:      3.0
+name:               exos
+version:            0.1.0.0
+
+common deps
+    ghc-options:      -Wall -O2
+    build-depends:    base
+    hs-source-dirs:   app
+    default-language: GHC2024
+
+executable mul2
+    import:           deps
+    main-is:          mul2.hs
+
+executable list
+    import:           deps
+    main-is:          list.hs
+
+executable fizzbuzz
+    import:           deps
+    main-is:          fizzbuzz.hs
+
+
