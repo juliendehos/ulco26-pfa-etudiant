@@ -1,0 +1,29 @@
+cabal-version:      3.0
+name:               tictactoe
+version:            0.1.0.0
+
+common deps
+    ghc-options:      -Wall -O2
+    build-depends:    base, vector
+    default-language: GHC2024
+
+library
+    import:           deps
+    hs-source-dirs:   src
+    exposed-modules:  Tictactoe
+
+executable tictactoe
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          main.hs
+    build-depends:    tictactoe
+
+test-suite test
+    import:           deps
+    ghc-options:      -Wno-incomplete-uni-patterns
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    build-depends:    hspec, tictactoe
+    main-is:          Spec.hs
+    other-modules:    TictactoeSpec
+
