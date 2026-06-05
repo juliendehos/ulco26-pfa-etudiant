@@ -1,0 +1,26 @@
+cabal-version:      3.0
+name:               exos
+version:            0.1.0.0
+
+common deps
+    ghc-options:      -Wall -O2
+    build-depends:    base
+    hs-source-dirs:   app
+    default-language: GHC2024
+
+executable jours
+    import:           deps
+    main-is:          jours.hs
+
+executable user
+    import:           deps
+    main-is:          user.hs
+
+executable list
+    import:           deps
+    main-is:          list.hs
+
+executable bst
+    import:           deps
+    main-is:          bst.hs
+
