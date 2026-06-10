@@ -1,0 +1,14 @@
+cabal-version:      3.0
+name:               genalbum
+version:            0.1.0.0
+
+common deps
+    ghc-options:      -Wall -O2
+    build-depends:    base, directory, lucid2, text
+    hs-source-dirs:   app
+    default-language: GHC2024
+
+executable genalbum
+    import:           deps
+    main-is:          main.hs
+
