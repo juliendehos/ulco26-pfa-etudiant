@@ -1,0 +1,18 @@
+cabal-version:      3.0
+name:               html
+version:            0.1.0.0
+
+common deps
+    ghc-options:      -Wall -O2
+    build-depends:    base, lucid2, text
+    hs-source-dirs:   app
+    default-language: GHC2024
+
+executable html1
+    import:           deps
+    main-is:          html1.hs
+
+executable html2
+    import:           deps
+    main-is:          html2.hs
+
