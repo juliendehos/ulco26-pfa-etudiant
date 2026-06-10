@@ -1,0 +1,50 @@
+cabal-version:      3.0
+name:               strings
+version:            0.1.0.0
+
+common deps
+    ghc-options:      -Wall -O2
+    build-depends:    base, bytestring, text
+    hs-source-dirs:   app
+    default-language: GHC2024
+
+executable playground
+    import:           deps
+    main-is:          playground.hs
+
+executable strings1
+    import:           deps
+    main-is:          strings1.hs
+
+executable strings2
+    import:           deps
+    main-is:          strings2.hs
+
+executable strings3
+    import:           deps
+    main-is:          strings3.hs
+
+executable strings4
+    import:           deps
+    main-is:          strings4.hs
+
+executable strings5
+    import:           deps
+    main-is:          strings5.hs
+
+executable strings6
+    import:           deps
+    main-is:          strings6.hs
+
+executable overloaded-strings1
+    import:           deps
+    main-is:          overloaded-strings1.hs
+
+executable overloaded-strings2
+    import:           deps
+    main-is:          overloaded-strings2.hs
+
+executable overloaded-strings3
+    import:           deps
+    main-is:          overloaded-strings3.hs
+
