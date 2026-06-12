@@ -1,4 +1,5 @@
-module Main where
+
+module Fonctions where
 
 -- TODO clampList
 
@@ -9,7 +10,4 @@ module Main where
 -- TODO maxAbs
 
 -- TODO maxAbs' :: [Double] -> Double
-
-main :: IO ()
-main = putStrLn "fonctions"
 

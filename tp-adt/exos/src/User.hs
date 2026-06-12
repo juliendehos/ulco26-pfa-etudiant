@@ -1,4 +1,5 @@
-module Main where
+
+module User where
 
 -- TODO User
 
@@ -15,7 +16,4 @@ module Main where
 -- TODO incAge
 
 -- TODO incAge'
-
-main :: IO ()
-main = pure ()
 

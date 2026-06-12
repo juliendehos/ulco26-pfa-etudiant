@@ -1,4 +1,5 @@
-module Main where
+
+module Bst where
 
 list1 :: [Integer]
 list1 = [7, 3, 13, 42, 37, 12]
@@ -14,7 +15,4 @@ list1 = [7, 3, 13, 42, 37, 12]
 -- TODO bstToList
 
 -- TODO mysort
-
-main :: IO ()
-main = pure ()
 

@@ -1,5 +1,5 @@
 
-module Main where
+module List where
 
 data List a
     = Nil
@@ -18,7 +18,4 @@ list2 = Cons 42 Nil
 -- TODO instance Functor
 
 -- TODO instance Foldable 
-
-main :: IO ()
-main = pure ()
 

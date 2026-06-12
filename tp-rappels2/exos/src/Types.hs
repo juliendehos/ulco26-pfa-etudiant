@@ -1,4 +1,5 @@
-module Main where
+
+module Types where
 
 -- TODO mytail
 
@@ -7,7 +8,4 @@ module Main where
 -- TODO mytail''
 
 -- TODO isSorted
-
-main :: IO ()
-main = putStrLn "types"
 

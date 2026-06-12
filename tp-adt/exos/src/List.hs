@@ -1,4 +1,5 @@
-module Main where
+
+module List where
 
 -- TODO List
 
@@ -18,5 +19,3 @@ module Main where
 
 -- TODO myShowList'
 
-main :: IO ()
-main = pure ()

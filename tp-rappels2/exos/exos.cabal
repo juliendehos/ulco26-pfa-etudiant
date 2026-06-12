@@ -5,14 +5,15 @@ version:            0.1.0.0
 common deps
     ghc-options:      -Wall -O2
     build-depends:    base
-    hs-source-dirs:   app
     default-language: GHC2024
 
-executable fonctions
+library
     import:           deps
-    main-is:          fonctions.hs
+    hs-source-dirs:   src
+    exposed-modules:  Fonctions Types
 
 executable types
     import:           deps
-    main-is:          types.hs
+    hs-source-dirs:   app
+    main-is:          main.hs
 

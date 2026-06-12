@@ -1,5 +1,5 @@
 
-module Main where
+module Compute where
 
 -- TODO safeSqrt
 
@@ -14,7 +14,4 @@ module Main where
 -- TODO myCompute3
 
 -- TODO myCompute4
-
-main :: IO ()
-main = pure ()
 

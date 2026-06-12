@@ -5,14 +5,15 @@ version:            0.1.0.0
 common deps
     ghc-options:      -Wall -O2
     build-depends:    base
-    hs-source-dirs:   app
     default-language: GHC2024
 
-executable compute
+library
     import:           deps
-    main-is:          compute.hs
+    hs-source-dirs:   src
+    exposed-modules:  Compute List
 
-executable list
+executable exos
     import:           deps
-    main-is:          list.hs
+    hs-source-dirs:   app
+    main-is:          main.hs
 

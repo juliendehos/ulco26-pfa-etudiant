@@ -1,4 +1,5 @@
-module Main where
+
+module Jours where
 
 -- TODO Jour
 
@@ -7,7 +8,4 @@ module Main where
 -- TODO estWeekend'
 
 -- TODO compterOuvrables
-
-main :: IO ()
-main = pure ()
 
