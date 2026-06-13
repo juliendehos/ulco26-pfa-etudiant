@@ -1,0 +1,14 @@
+- name: Haskell Curry
+  year: 1900
+  haskeller: false
+  education:
+    - univ: Harvard
+      country: USA
+    - univ: MIT
+      country: USA
+- name: Simon Peyton Jones
+  year: 1958
+  haskeller: true
+  education:
+    - univ: Cambridge
+      country: UK
