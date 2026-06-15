@@ -1,0 +1,26 @@
+cabal-version:      3.0
+name:               movies1
+version:            0.1.0.0
+
+common deps
+    ghc-options:      -O2 -Wall
+    build-depends:    base, aeson, lucid2, sqlite-simple, text
+    default-language: GHC2024
+
+library
+    import:           deps
+    hs-source-dirs:   src
+    exposed-modules:  Movie
+
+executable app1
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          app1.hs
+    build-depends:    movies1
+
+executable app2
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          app2.hs
+    build-depends:    movies1
+

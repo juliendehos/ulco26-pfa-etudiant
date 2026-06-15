@@ -1,0 +1,32 @@
+cabal-version:      3.0
+name:               movies3
+version:            0.1.0.0
+
+common deps
+    ghc-options:      -O2 -Wall -Wno-orphans
+    build-depends:    base, aeson, lucid2, selda, selda-sqlite, text
+    default-language: GHC2024
+
+library
+    import:           deps
+    hs-source-dirs:   src
+    exposed-modules:  Movie
+
+executable init-db
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          init-db.hs
+    build-depends:    movies3
+
+executable app1
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          app1.hs
+    build-depends:    movies3
+
+executable app2
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          app2.hs
+    build-depends:    movies3
+
