@@ -6,6 +6,7 @@
 module Movie where
 
 import Data.Aeson
+import Data.Bool
 import Database.Selda
 import Database.Selda.SQLite
 
@@ -68,17 +69,29 @@ instance ToJSON ProdInfo where
 
 -- TODO selectMoviesFromPersonId
 
+----------------------------------------------------------------------
+-- init
+----------------------------------------------------------------------
+
+printStatus :: String -> Bool -> IO ()
+printStatus status res = putStrLn $ status <> ": " <> bool "KO" "OK" res
+
 {-
 initDb :: SeldaT SQLite IO ()
 initDb = do
+
+    tryDropTable prod_table
+    tryDropTable movie_table
+    tryDropTable person_table
+    tryDropTable role_table
 
     createTable movie_table
     tryInsert movie_table
         [ Movie def "Bernie" 1996
         , Movie def "Le Kid" 1921 
         , Movie def "Metropolis" 1927
-        , Movie def "Citizen Kane" 1941 ]
-        >>= liftIO . print
+        , Movie def "Citizen Kane" 1941
+        ] >>= liftIO . printStatus "movie"
 
     createTable person_table
     tryInsert person_table
@@ -87,15 +100,15 @@ initDb = do
         , Person def "Albert Dupontel"
         , Person def "Claude Perron"
         , Person def "Alfred Abel"
-        , Person def "Fritz Lang" ]
-        >>= liftIO . print
+        , Person def "Fritz Lang"
+        ] >>= liftIO . printStatus "person"
 
     createTable role_table
     tryInsert role_table
         [ Role def "Réalisateur"
         , Role def "Acteur"
-        , Role def "Producteur" ]
-        >>= liftIO . print
+        , Role def "Producteur"
+        ] >>= liftIO . printStatus "role"
 
     createTable prod_table
     tryInsert prod_table
@@ -109,7 +122,7 @@ initDb = do
         , Prod (toId 3) (toId 6) (toId 1)
         , Prod (toId 4) (toId 1) (toId 1)
         , Prod (toId 4) (toId 1) (toId 2)
-        , Prod (toId 4) (toId 1) (toId 3) ]
-        >>= liftIO . print
+        , Prod (toId 4) (toId 1) (toId 3)
+        ] >>= liftIO . printStatus "prod"
 -}
 
