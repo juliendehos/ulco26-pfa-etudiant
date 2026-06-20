@@ -1,0 +1,28 @@
+cabal-version:      3.0
+name:               rpn
+version:            0.1.0.0
+
+common deps
+    ghc-options:      -Wall -O2
+    build-depends:    base
+    default-language: GHC2024
+
+library
+    import:             deps
+    hs-source-dirs:     src
+    exposed-modules:    Eval Expr Lisp Parse
+
+executable rpn
+    import:             deps
+    hs-source-dirs:     app
+    main-is:            main.hs
+    build-depends:      rpn
+
+test-suite test
+    import:           deps
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    build-depends:    hspec, rpn
+    main-is:          Spec.hs
+    other-modules:    EvalSpec LispSpec ParseSpec
+
