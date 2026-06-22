@@ -1,0 +1,26 @@
+cabal-version:      3.0
+name:               mcpi
+version:            0.1.0.0
+
+common deps
+    ghc-options:      -O2 -Wall
+    build-depends:    base, Chart, Chart-cairo, random, transformers
+    default-language: GHC2024
+
+library
+    import:           deps
+    hs-source-dirs:   src
+    exposed-modules:  Mcpi1 Mcpi2
+
+executable mcpi
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          mcpi.hs
+    build-depends:    mcpi
+
+executable plot
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          plot.hs
+    build-depends:    mcpi
+
