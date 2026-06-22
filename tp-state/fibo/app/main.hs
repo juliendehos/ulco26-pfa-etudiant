@@ -31,16 +31,16 @@ fiboIterative n = go 0 0 1
 myArgs :: Parser (String, Int)
 myArgs = (,)
       <$> argument str (metavar "algo" <> help "iterative | naive | cache | state" )
-      <*> argument auto (metavar "nsims" <> help "number of monte-carlo simulations" )
+      <*> argument auto (metavar "n" <> help "n-th term to compute" )
 
 main :: IO ()
 main = do
 
-  (algo, nsims) <- execParser 
+  (algo, n) <- execParser 
                     (info (myArgs <**> helper)
                           (fullDesc <> header "Compute pi using monte-carlo."))
 
   case algo of
-    "iterative" -> print $ fiboIterative nsims
+    "iterative" -> print $ fiboIterative n
     _ -> putStrLn "unknown algo, try --help"
 
