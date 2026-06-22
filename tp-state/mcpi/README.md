@@ -12,9 +12,9 @@ de 500 échantillonnages.
 
 ## Planning
 
-- [ ] Implémentez le module `Mcpi1` (sans monade `State`). Testez avec les deux
+- [ ] Implémenter le module `Mcpi1` (sans monade `State`). Tester avec les deux
   programmes.
 
-- [ ] Implémentez le module `Mcpi2` (avec monade `State`). Testez avec les deux
+- [ ] Implémenter le module `Mcpi2` (avec monade `State`). Tester avec les deux
   programmes.
 
