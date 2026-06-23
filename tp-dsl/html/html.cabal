@@ -1,0 +1,36 @@
+cabal-version:      3.0
+name:               html
+version:            0.1.0.0
+
+common deps
+    ghc-options:      -Wall -O2
+    build-depends:    base, scotty, text, transformers
+    default-language: GHC2024
+
+common apps
+    hs-source-dirs:     app
+    build-depends:      html
+
+library
+    import:             deps
+    hs-source-dirs:     src
+    exposed-modules:    Adt.Html
+                        Monoid.Html
+                        State.Html
+
+executable html-adt
+    import:             deps, apps
+    main-is:            html-adt.hs
+
+executable html-monoid
+    import:             deps, apps
+    main-is:            html-monoid.hs
+
+executable html-state
+    import:             deps, apps
+    main-is:            html-state.hs
+
+executable serve
+    import:             deps, apps
+    main-is:            serve.hs
+
