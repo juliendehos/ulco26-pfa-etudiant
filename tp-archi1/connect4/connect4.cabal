@@ -1,0 +1,20 @@
+cabal-version:      3.0
+name:               connect4
+version:            0.1.0.0
+
+common deps
+    ghc-options:      -O2 -Wall -ddump-splices
+    default-language: GHC2024
+    build-depends:    base, gloss, lens, linear, transformers, vector
+
+library
+    import:           deps
+    hs-source-dirs:   src
+    exposed-modules:  Connect4
+
+executable connect4
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          main.hs
+    build-depends:    connect4
+
