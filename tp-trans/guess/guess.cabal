@@ -1,0 +1,38 @@
+cabal-version:      3.0
+name:               guess
+version:            0.1.0.0
+
+common deps
+    ghc-options:      -O2 -Wall
+    build-depends:    base, mtl, random, transformers
+    default-language: GHC2024
+
+library
+    import:           deps
+    hs-source-dirs:   src
+    exposed-modules:  MonadState StateT
+
+executable guess0
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          guess0.hs
+    build-depends:    guess
+
+executable guess1
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          guess1.hs
+    build-depends:    guess
+
+executable guess2
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          guess2.hs
+    build-depends:    guess
+
+executable guess3
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          guess3.hs
+    build-depends:    guess
+
