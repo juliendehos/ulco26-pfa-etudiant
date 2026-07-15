@@ -1,0 +1,60 @@
+cabal-version:      3.0
+name:               web-counter
+version:            0.1.0.0
+
+common deps
+    ghc-options:      -Wall -O2
+    default-language: GHC2024
+    build-depends:    base
+                    , lucid2
+                    , mtl
+                    , scotty
+                    , stm
+                    , text
+                    , transformers
+                    , wai-extra
+                    , unliftio-core
+
+library
+    import:           deps
+    hs-source-dirs:   src
+    exposed-modules:  Counter1
+                      Counter2
+                      View
+
+executable web-counter0
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          web-counter0.hs
+    build-depends:    web-counter
+
+executable web-counter1
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          web-counter1.hs
+    build-depends:    web-counter
+
+executable web-counter2
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          web-counter2.hs
+    build-depends:    web-counter
+
+executable cli-counter0
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          cli-counter0.hs
+    build-depends:    web-counter
+
+executable cli-counter1
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          cli-counter1.hs
+    build-depends:    web-counter
+
+executable cli-counter2
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          cli-counter2.hs
+    build-depends:    web-counter
+
