@@ -1,0 +1,39 @@
+cabal-version:      3.0
+name:               counter
+version:            0.1.0.0
+
+common deps
+    ghc-options:      -Wall -O2
+    default-language: GHC2024
+    build-depends:    base
+                    , lucid2
+                    , mtl
+                    , scotty
+                    , stm
+                    , text
+                    , transformers
+                    , unliftio-core
+
+library
+    import:           deps
+    hs-source-dirs:   src
+    exposed-modules:  Applications.Cli
+                      Applications.Html
+                      Applications.Web
+                      Effects.Counter
+                      Effects.Logger
+                      Interpreters.CounterTVar
+                      Interpreters.LoggerFunc
+
+executable cli-counter
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          cli-counter.hs
+    build-depends:    counter
+
+executable web-counter
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          web-counter.hs
+    build-depends:    counter
+
