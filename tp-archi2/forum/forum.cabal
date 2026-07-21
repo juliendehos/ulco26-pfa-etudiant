@@ -1,0 +1,45 @@
+cabal-version:      3.0
+name:               forum
+version:            0.1.0.0
+
+common deps
+    ghc-options:      -Wall -O2
+    default-language: GHC2024
+    build-depends:    base
+                    , effectful
+                    , effectful-th
+                    , log-effectful
+                    , log-base
+                    , lucid2
+                    , scotty
+                    , selda
+                    , selda-sqlite
+                    , text
+                    , transformers
+                    , wai-extra
+                    , unliftio
+                    , unliftio-core
+
+library
+    import:           deps
+    hs-source-dirs:   src
+    exposed-modules:  Applications.Html
+                      Applications.Init
+                      Applications.Params
+                      Applications.Server
+                      Domain.Message
+                      Effects.Db
+                      Interpreters.DbSelda
+
+executable forum-init
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          forum-init.hs
+    build-depends:    forum
+
+executable forum-server
+    import:           deps
+    hs-source-dirs:   app
+    main-is:          forum-server.hs
+    build-depends:    forum
+
