@@ -4,10 +4,15 @@
 module View where
 
 import Lucid
+import Data.Text as T
 import Data.Text.Lazy as L
 
-myRender :: Html () -> Text
+myRender :: Html () -> L.Text
 myRender = renderText
+
+myStyle :: T.Text
+myStyle = 
+  " body {background-color: pink;} "
 
 mkPage :: Integer -> Html ()
 mkPage c = 
@@ -16,6 +21,7 @@ mkPage c =
     head_ $ do
       meta_ [charset_ "utf-8"]
       title_ "web-counter"
+      style_ myStyle
 
     body_ $ do
        h1_ "web-counter"
