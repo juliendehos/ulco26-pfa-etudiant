@@ -7,15 +7,14 @@ let
 
 in ghc.developPackage {
   root = ./.;
-  # withHoogle = false;
+  withHoogle = false;
 
   modifier = drv:
-    #pkgs.haskell.lib.dontHaddock (
+    pkgs.haskell.lib.dontHaddock (
       pkgs.haskell.lib.addBuildTools drv (with ghc; [
         cabal-install
         haskell-language-server
-    ]);
-    #]));
+    ]));
 
 }
 
