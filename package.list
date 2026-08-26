@@ -8,4 +8,5 @@ libncurses-dev
 libncurses6
 libtinfo6
 pkg-config
+ripgrep
 
