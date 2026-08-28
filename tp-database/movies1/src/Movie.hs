@@ -1,5 +1,4 @@
 
-{-# LANGUAGE MultilineStrings #-}
 {-# LANGUAGE OverloadedStrings #-}
 
 module Movie where
