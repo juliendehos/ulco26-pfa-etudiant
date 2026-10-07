@@ -36,6 +36,7 @@ INSERT INTO movie VALUES(1, 'Bernie', 1996);
 INSERT INTO movie VALUES(2, 'Le Kid', 1921);
 INSERT INTO movie VALUES(3, 'Metropolis', 1927);
 INSERT INTO movie VALUES(4, 'Citizen Kane', 1941);
+INSERT INTO movie VALUES(5, 'Les Temps Modernes', 1936);
 
 INSERT INTO person VALUES(1, 'Orson Welles');
 INSERT INTO person VALUES(2, 'Charlie Chaplin');
@@ -59,4 +60,5 @@ INSERT INTO prod VALUES(3, 6, 1);
 INSERT INTO prod VALUES(4, 1, 1);
 INSERT INTO prod VALUES(4, 1, 2);
 INSERT INTO prod VALUES(4, 1, 3);
+INSERT INTO prod VALUES(5, 2, 2);
 

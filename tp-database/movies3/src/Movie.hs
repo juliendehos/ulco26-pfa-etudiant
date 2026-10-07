@@ -91,6 +91,7 @@ initDb = do
         , Movie def "Le Kid" 1921 
         , Movie def "Metropolis" 1927
         , Movie def "Citizen Kane" 1941
+        , Movie def "Les Temps Modernes" 1936
         ] >>= liftIO . printStatus "movie"
 
     createTable person_table
@@ -123,6 +124,7 @@ initDb = do
         , Prod (toId 4) (toId 1) (toId 1)
         , Prod (toId 4) (toId 1) (toId 2)
         , Prod (toId 4) (toId 1) (toId 3)
+        , Prod (toId 5) (toId 2) (toId 2)
         ] >>= liftIO . printStatus "prod"
 -}
 
