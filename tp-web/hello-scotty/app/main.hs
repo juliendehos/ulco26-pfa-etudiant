@@ -18,8 +18,8 @@ data Person = Person
 
 instance ToJSON Person
 
-add2 :: Integer -> Integer -> Integer
-add2 = (+)
+myAdd :: Integer -> Integer -> Integer
+myAdd = (+)
 
 -- TODO
 urls :: [T.Text]
